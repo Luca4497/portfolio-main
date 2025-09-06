@@ -1,0 +1,32 @@
+.scrollButton {
+    position: fixed;
+    bottom: 2.5rem;
+    right: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    background-color: var(--tertiary);
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 9999px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    /* inizialmente un po’ più in basso */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 998;
+
+}
+
+.scrollButtonVisible {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translateY(0);
+    /* quando visibile: posizione normale */
+}
+
+
+.scrollButtonVisible:hover {
+    opacity: 1;
+}

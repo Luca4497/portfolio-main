@@ -1,0 +1,42 @@
+li {
+    list-style: none;
+}
+
+li a {
+    text-decoration: none;
+    color: var(--tertiary);
+}
+
+
+.header {
+    /* box */
+    background-color: var(--accent);
+    /* border-radius: 0 0 1rem 1rem; */
+
+    /* text */
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+    z-index: 1000;
+}
+
+.nav_container {
+    padding: 1rem 0;
+}
+
+.header_link {
+    color: var(--tertiary);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.header_link:hover {
+    text-decoration: underline;
+    transition: 0.3s;
+
+}
+
+.burger_menu {
+    background-color: var(--tertiary) !important;
+    color: var(--accent) !important;
+}

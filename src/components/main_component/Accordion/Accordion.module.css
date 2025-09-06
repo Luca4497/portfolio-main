@@ -1,0 +1,129 @@
+.item {
+    margin: 0.5rem;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.25s background-color;
+
+    /* debug */
+    /* width: 600px; */
+    /* background-color: white; */
+
+
+}
+
+.item.active {
+    /* background-color: #f2f8fe; */
+}
+
+h4.tile {
+    margin: 0;
+}
+
+
+div.content {
+    max-height: 0;
+    overflow: hidden;
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 300;
+    margin: 0;
+    transition: 0.5s max-height, 0.5s margin;
+}
+
+div.content.active {
+    max-height: 10rem;
+    margin: 1rem 0;
+}
+
+
+.icon_container {
+    content: "";
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    z-index: 2;
+    border-radius: 9999px;
+    /* transform: translateX(-3rem) translateY(0.25rem); */
+    transition: background-color 0.5s, box-shadow 0.5s;
+    background-color: var(--accent);
+    box-shadow: rgba(99, 99, 99, 0.2) 2px 2px 8px 2px;
+}
+
+
+
+.icon_container.active {}
+
+.stroke_one,
+.stroke_two {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    transition: 0.5s all;
+}
+
+.stroke_one {
+    width: 3px;
+    height: 16px;
+    background-color: var(--tertiary);
+    transform: rotate(0deg);
+    ;
+}
+
+.stroke_one.active {
+    transform: rotate(90deg);
+
+}
+
+.stroke_two {
+    width: 3px;
+    height: 16px;
+    background-color: var(--tertiary);
+    transform: rotate(90deg);
+
+}
+
+.project_link_box {
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--accent);
+    margin: 0 0.3rem;
+    border-radius: 9999px;
+}
+
+.project_link_box img {
+    width: 100%;
+    padding: 0.3rem;
+    transition: 0.5s ease-in-out;
+}
+
+
+.project_link_box:hover img {
+    transform: rotatez(5deg);
+    padding: 0.25rem;
+}
+
+.task_link {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    color: var(--secondary);
+    text-decoration: underline;
+    transition: 0.3s;
+}
+
+.task_link:hover {
+    color: var(--accent);
+    font-size: 1rem;
+    padding-right: -0.2rem;
+}
+
+
+/*------------------------------RESPONSIVE------------------------------*/
+@media (max-width: 320px) {
+    h1.tile {
+        font-size: 1.8rem;
+    }
+}
